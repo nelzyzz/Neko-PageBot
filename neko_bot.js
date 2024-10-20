@@ -73,7 +73,7 @@ app.get('/webhook', async (req, res) => {
 app.post('/webhook', async (req, res) => {
   const body = req.body;
   if (body.object === 'page') {
-    body.entry.forEach(async entry => entry.messaging.forEach(async event => require('./ws3/listenMessage')(event, PAGE_ACCESS_TOKEN)));
+    body.entry.forEach(async entry => entry.messaging.forEach(async event => require('./neko/listenMessage')(event, PAGE_ACCESS_TOKEN)));
     res.status(200).send("EVENT_RECEIVED");
   } else {
     res.status(404).send("404_NOTFOUND");
@@ -87,7 +87,7 @@ async function post() {
       content,
       author
     } = (await axios.get(`https://api.realinspire.tech/v1/quotes/random`)).data[0];
-    await api.publishPost(`${content}\n\n—${author}`, PAGE_ACCESS_TOKEN);
+    await api.publishPost(`${content}\n\nâ€”${author}`, PAGE_ACCESS_TOKEN);
     console.log("Triggered autopost.");
   }, {
     scheduled: true,
