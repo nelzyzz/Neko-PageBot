@@ -80,7 +80,7 @@ Before starting, ensure you have a Facebook Page. If you don't have one, [create
    - Click on "Setup Webhooks".
    - Enter the following details:
      - **Callback URL:** `https://your_hosting.site/webhook`
-     - **Verify Token:** `konai`
+     - **Verify Token:** `nekoai`
    - Subscribe to the following fields:
      - `messages`
      - `messaging_optins`
