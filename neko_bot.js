@@ -7,7 +7,7 @@ fs = require('fs'),
 api = require('./neko/api'),
 app = express(),
 VERIFY_TOKEN = 'nekoai',
-PASSWORD_ADMIN = process.env.pass || 'nekoai@zishin.dev',
+PASSWORD_ADMIN = process.env.pass,
 PAGE_ACCESS_TOKEN = api.PAGE_ACCESS_TOKEN,
 PORT = process.env.PORT || 3000
 
