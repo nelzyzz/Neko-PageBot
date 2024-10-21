@@ -1,5 +1,4 @@
-const token = "<Paste your token here!>";
-const PAGE_ACCESS_TOKEN = process.env.token || token;
+const PAGE_ACCESS_TOKEN = process.env.token,
 const request = require('request');
 const axios = require("axios");
 const cmdLoc = __dirname + "/commands";
